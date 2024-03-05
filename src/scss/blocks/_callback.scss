@@ -1,0 +1,64 @@
+.callback {
+    &.double-grid {
+        @include breakpoint(tablet) {
+            gap: 3rem;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        align-self: self-start;
+        gap: 3rem;
+
+        @include breakpoint(tablet) {
+            gap: 2rem;
+        }
+    }
+
+    &__title {
+        flex: 0 1 auto;
+    }
+
+    &__text {
+        flex: 0 1 auto;
+        font-weight: 300;
+        opacity: 0.6;
+    }
+
+    &:not(.callback--column) {
+        .form__button {
+            &.button {
+                background-color: var(--yellow-100, #EAFC40);
+
+                span {
+                    color: var(--black-100, #254558);
+                }
+
+                .icon-enter {
+                    fill: var(--black-100, #254558);
+                }
+
+                @include hover-active {
+                    span {
+                        color: var(--blue-100, #1ED2F4);
+                    }
+
+                    .icon-enter {
+                        fill: var(--blue-100, #1ED2F4);
+                    }
+                }
+            }
+        }
+    }
+
+    &--column {
+        .callback__left {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+}

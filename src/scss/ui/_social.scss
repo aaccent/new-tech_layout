@@ -1,0 +1,41 @@
+.social {
+    display: block;
+    transition: border 0.3s ease-out;
+
+    .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: var(--white-color, #fff);
+        transition: fill 0.3s ease-out;
+    }
+
+    @include hover-active {
+        .icon {
+            fill: var(--yellow-100, #EAFC40);
+        }
+    }
+
+    &--border {
+        aspect-ratio: 1;
+        padding: 1rem;
+        border-style: solid;
+        border-width: 1px;
+        border-color: var(--white-color, #fff);
+    }
+
+    &--dark {
+        border-color: var(--black-20, #D3DADE);
+
+        .icon {
+            fill: var(--black-100, #254558);
+        }
+
+        @include hover-active {
+            border-color: var(--black-100, #254558);
+
+            .icon {
+                fill: var(--black-80, #516A79);
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.category {
+    &__title {
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+
+        border-color: var(--black-20, #D3DADE);
+        border-style: solid;
+        border-width: 0 0 1px 0;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 3rem;
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+        gap: 2rem;
+        align-content: stretch;
+        margin-bottom: 7rem;
+
+        @include breakpoint(tablet) {
+            grid-template-columns: 100%;
+            gap: 3rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        &:nth-child(odd) {
+            grid-column: 1 / 3;
+
+            @include breakpoint(tablet) {
+                grid-column: 1;
+            }
+        }
+
+        &:nth-child(even) {
+            grid-column: 3 / 5;
+
+            @include breakpoint(tablet) {
+                grid-column: 1;
+            }
+        }
+    }
+
+    &__add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+
+        border-color: var(--black-20, #D3DADE);
+        border-style: solid;
+        border-width: 1px 0 0 0;
+
+        @include breakpoint(tablet) {
+            border-width: 0 0 1px 0;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__add-button {
+        &.callback-button {
+            span {
+                @include breakpoint(tablet) {
+                    font: 400 1.6rem/1.1875 var(--main-ff);
+                }
+            }
+        }
+    }
+}

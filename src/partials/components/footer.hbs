@@ -1,7 +1,213 @@
-<footer class="page-footer">
-    <div class="container">
-        <h2>
-            Footer
-        </h2>
+<footer class="page-footer{{#if lightForm}} page-footer--light-form{{/if}}{{#if hiddenForm}} page-footer--hidden-form{{/if}}">
+    <div class="page-footer__form">
+        <div class="page-footer__site-container">
+            <div class="page-footer__callback callback double-grid">
+                <div class="double-grid__left callback__left">
+                    <h3 class="callback__title h3">
+                        Остались вопросы?<br>
+                        Задайте их менеджеру<br>
+                        NewTechnologies
+                    </h3>
+                    <p class="callback__text">
+                        Оставьте заявку, менеджер перезвонит, ответит<br>
+                        на вопросы, и поможет сформировать заявку
+                    </p>
+                </div>
+                <div class="double-grid__right callback__right">
+                    <form action="" class="callback__form form" data-need-validation>
+                        <div class="form__rows">
+                            <div class="form__row">
+                                <input
+                                    class="form__input input js-text-input"
+                                    type="text"
+                                    name="callback-name"
+                                    id="callback-name"
+                                    placeholder="Имя"
+                                    autocomplete="off"
+                                    required
+                                    data-parsley-reqtext
+                                >
+                            </div>
+
+                            <div class="form__row">
+                                <input
+                                    class="form__input input js-phone-input"
+                                    type="tel"
+                                    name="callback-phone"
+                                    id="callback-phone"
+                                    placeholder="+ 7 (999) 999-99-99"
+                                    autocomplete="off"
+                                    required
+                                    data-parsley-phone
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form__submit">
+                            <button type="submit" class="button form__button">
+                                <span>Оставить заявку</span>
+                                <svg class="icon icon-enter">
+                                    <use xlink:href="#enter"></use>
+                                </svg>
+                            </button>
+
+                            <div class="form__agreement">
+                                <p>
+                                    <span>Нажимая на кнопку, я соглашусь<br> с&nbsp;</span>
+                                    <a href="#">политикой конфиденциальности</a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-footer__main">
+        <div class="page-footer__site-container">
+            <div class="page-footer__top">
+                <div class="page-footer__flex">
+                    <div class="page-footer__flex-left page-footer__flex-left--info page-footer__flex-left--border">
+                        <a href="/" class="page-footer__logo logo logo--big">
+                            <svg aria-hidden="true" class="icon icon-logo">
+                                <use xlink:href="#logo-white"></use>
+                            </svg>
+                        </a>
+
+                        <ul class="page-footer__contacts">
+                            <li>
+                                <button type="button" class="page-footer__phone phone">
+                                    <span class="phone__number">8 800 353 00 00</span>
+                                    <span class="phone__text">заказать звонок</span>
+                                </button>
+                            </li>
+                            <li>
+                                <a href="mailto:mail@example.com" class="page-footer__phone phone">
+                                    <span class="phone__number">mail@example.com</span>
+                                    <span class="phone__text">написать Email</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://yandex.ru/maps/-/CDFaFW0c" target="_blank" class="page-footer__phone phone">
+                                    <span class="phone__number">Казань, Баумана, 1</span>
+                                    <span class="phone__text">Построить маршрут</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="page-footer__socials">
+                            <li>
+                                <a href="#" class="page-footer__social social">
+                                    <svg aria-hidden="true" class="icon icon-social">
+                                        <use xlink:href="#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="page-footer__social social">
+                                    <svg aria-hidden="true" class="icon icon-social">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="page-footer__social social">
+                                    <svg aria-hidden="true" class="icon icon-social">
+                                        <use xlink:href="#youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="page-footer__social social">
+                                    <svg aria-hidden="true" class="icon icon-social">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="page-footer__social social">
+                                    <svg aria-hidden="true" class="icon icon-social">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="page-footer__flex-right">
+                        <ul class="page-footer__menu footer-menu">
+                            <li class="footer-menu__item">
+                                <a href="/" class="footer-menu__link">
+                                    <span class="h3">Главная</span>
+                                    <svg class="icon icon-link">
+                                        <use xlink:href="#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="./page-services.html" class="footer-menu__link">
+                                    <span class="h3">Услуги</span>
+                                    <svg class="icon icon-link">
+                                        <use xlink:href="#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="./page-contacts.html" class="footer-menu__link">
+                                    <span class="h3">Контакты</span>
+                                    <svg class="icon icon-link">
+                                        <use xlink:href="#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="./page-partners.html" class="footer-menu__link">
+                                    <span class="h3">Партнёрам</span>
+                                    <svg class="icon icon-link">
+                                        <use xlink:href="#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="./page-vacancies.html" class="footer-menu__link">
+                                    <span class="h3">Вакансии</span>
+                                    <svg class="icon icon-link">
+                                        <use xlink:href="#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer__bottom">
+                <div class="page-footer__flex">
+                    <div class="page-footer__flex-left">
+                        <span class="page-footer__copyright">
+                            New Technologies,  2024
+                        </span>
+                    </div>
+                    <div class="page-footer__flex-right">
+                        <p class="page-footer__policy">
+                            <a href="#" target="_blank">
+                                Политика&nbsp;конфиденциальности
+                            </a>
+                            <span>&nbsp;и&nbsp;</span>
+                            <a href="#" target="_blank">
+                                условия&nbsp;обработки персональных&nbsp;данных
+                            </a>
+                        </p>
+                        <a href="https://www.aaccent.ru/" target="_blank" class="page-footer__developer">
+                            <span>Разработано:</span>
+                            <svg class="icon icon-dev">
+                                <use xlink:href="#accent"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>

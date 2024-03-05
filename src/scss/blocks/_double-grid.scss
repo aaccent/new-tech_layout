@@ -1,0 +1,40 @@
+.double-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+
+    @include breakpoint(small-tablet) {
+        grid-template-columns: 100%
+    }
+
+    &__left {
+        grid-column: 1 / 3;
+
+        @include breakpoint(small-tablet) {
+            grid-column: 1;
+        }
+    }
+
+    &__right {
+        grid-column: 3 / 5;
+
+        @include breakpoint(small-tablet) {
+            grid-column: 1;
+        }
+    }
+
+    &--wrap {
+        @include breakpoint(tablet) {
+            grid-template-columns: 100%;
+            gap: 3rem;
+        }
+
+        .double-grid__right,
+        .double-grid__left {
+            @include breakpoint(tablet) {
+                grid-column: 1;
+            }
+        }
+    }
+}

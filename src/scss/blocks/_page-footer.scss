@@ -1,0 +1,278 @@
+.page-footer {
+    color: var(--white-color, #fff);
+
+    &__form {
+        background-color: var(--black-100, #254558);
+        padding: 10rem 0 11.4rem;
+
+        @include breakpoint(tablet) {
+            padding: 8rem 0;
+        }
+
+        @include breakpoint(small-tablet) {
+            padding: 5rem 0;
+        }
+
+        .form__rows {
+            max-width: 72rem;
+        }
+    }
+
+    &__main {
+        padding: 3rem 0 3rem;
+        background-color: var(--back-color, #182E3B);
+
+        @include breakpoint(tablet) {
+            padding: 5rem 0 3rem;
+        }
+
+    }
+
+    &__bottom {
+        margin-top: 2.5rem;
+        padding: 3rem 0 0;
+
+        border-style: solid;
+        border-color: rgba($color: #fff, $alpha: 0.2);
+        border-width: 1px 0 0 0;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: stretch;
+
+        @include breakpoint(portrait-tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__flex-left {
+        flex: 0 0 43.7rem;
+
+        @include breakpoint(large-desktop) {
+            flex: 0 0 38.7rem;
+        }
+
+        @include breakpoint(laptop) {
+            flex: 0 0 30rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            flex: 1 0 100%;
+            margin-bottom: 1.8rem;
+        }
+
+        &--info  {
+            display: flex;
+            flex-direction: column;
+
+            @include breakpoint(portrait-tablet) {
+                align-items: flex-start;
+                flex-flow: row wrap;
+                gap: 6rem;
+            }
+        }
+
+        &--border {
+            padding: 2rem 0 2.4rem;
+
+            border-style: solid;
+            border-color: rgba($color: #fff, $alpha: 0.2);
+            border-width: 0 1px 0 0;
+
+            @include breakpoint(portrait-tablet) {
+                padding: 0 0 5rem;
+                border-width: 0 0 1px 0;
+            }
+        }
+    }
+
+    &__flex-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+        flex: 1 1 auto;
+        padding-left: 16rem;
+
+        @include breakpoint(large-desktop) {
+            padding-left: 10rem;
+        }
+
+        @include breakpoint(laptop) {
+            padding-left: 6rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            flex-wrap: wrap;
+            padding-left: unset;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 6rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 1.8rem;
+        }
+
+    }
+
+    &__contacts {
+        max-width: 30rem;
+        margin-bottom: 6rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 3rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .phone__text {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__phone {
+        &.phone {
+            .phone__number {
+                @include breakpoint(small-tablet) {
+                    font: var(--font-h-second-22);
+                }
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        column-gap: 3rem;
+        margin-top: auto;
+
+        @include breakpoint(portrait-tablet) {
+            margin-top: unset;
+        }
+    }
+
+    &__menu {
+        padding: 2rem 0 2.4rem;
+
+        @include breakpoint(portrait-tablet) {
+            padding: 2.9rem 0 2.4rem;
+        }
+    }
+
+    &__copyright {
+        font: var(--font-p-main-14);
+        opacity: 0.5;
+    }
+
+    &__policy {
+        display: inline-block;
+        line-height: 1.14;
+
+        span,
+        a {
+            display: inline;
+
+            font: var(--font-p-main-14);
+            opacity: 0.5;
+        }
+
+        a {
+            transition: opacity 0.3s ease-out;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__developer {
+        display: flex;
+        align-items: center;
+        column-gap: 3.2rem;
+
+        span {
+            font: var(--font-p-main-14);
+            opacity: 0.5;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .icon-dev {
+            width: 12.7rem;
+            height: 3.2rem;
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+            span {
+                opacity: 1;
+            }
+
+            .icon-dev {
+                transform: translateX(-1rem);
+            }
+        }
+    }
+
+    &--light-form {
+        .page-footer__form {
+            color: var(--back-color, #182E3B);
+            background-color: var(--white-color, #fff);
+        }
+
+        .callback {
+            &:not(.callback--column) {
+                .form__button {
+                    &.button {
+                        background-color: var(--black-100, #254558);
+
+                        span {
+                            color: var(--white-color, #fff);
+                        }
+
+                        .icon-enter {
+                            fill: var(--white-color, #fff);
+                        }
+
+                        @include hover-active {
+                            span {
+                                color: var(--yellow-100, #EAFC40);
+                            }
+
+                            .icon-enter {
+                                fill: var(--yellow-100, #EAFC40);
+                            }
+                        }
+                    }
+                }
+
+                .form__input {
+                    &.input {
+                        color: var(--black-100, #254558);
+                        border-color: var(--black-100, #254558);
+
+                        @include placeholder {
+                            color: var(--black-100, #254558);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &--hidden-form {
+        .page-footer__form {
+            display: none;
+        }
+    }
+}

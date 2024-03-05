@@ -1,5 +1,193 @@
-<header class="page-header">
-    <div class="container">
-        <h2>Header</h2>
+<header class="page-header{{#if lightHeader}} page-header--light-theme{{/if}}">
+    <div class="page-header__top-line">
+        <div class="page-header__site-container">
+            <form action="" class="page-header__languages languages">
+                <div class="languages__body">
+                    <input class="visually-hidden" value="Русский" hidden type="radio" name="languages-change-radio" id="russian-language-id" checked required>
+                    <input class="visually-hidden" value="English" hidden type="radio" name="languages-change-radio" id="english-language-id" required>
+                    <input class="visually-hidden" value="中国人" hidden type="radio" name="languages-change-radio" id="chinese-language-id" required>
+
+                    <button type="button" class="languages__button">
+                        <span class="languages__buttons-text">Ru</span>
+                        <span class="languages__arrow">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <ul class="languages__list">
+                        <li class="languages__item">
+                            <label for="russian-language-id">
+                                Русский
+                            </label>
+                        </li>
+                        <li class="languages__item">
+                            <label for="english-language-id">
+                                English
+                            </label>
+                        </li>
+                        <li class="languages__item">
+                            <label for="chinese-language-id">
+                                中国人
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-header__main-line page-header__main-line--desktop">
+        <div class="page-header__site-container">
+            <a href="/" class="page-header__logo logo">
+                <svg aria-hidden="true" class="icon icon-logo">
+                    <use xlink:href="#logo"></use>
+                </svg>
+            </a>
+
+            <nav class="page-header__nav">
+                <ul class="page-header__menu menu">
+                    <li class="menu__item">
+                        <a href="/" class="menu__link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./page-services.html" class="menu__link">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./page-contacts.html" class="menu__link">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./page-partners.html" class="menu__link">
+                            Партнёрам
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./page-vacancies.html" class="menu__link">
+                            Вакансии
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#callback-modal" class="page-header__phone phone js-open-modal">
+                    <span class="phone__number">8 800 353 00 00</span>
+                    <span class="phone__text">заказать звонок</span>
+                </a>
+            </nav>
+
+            <a href="#callback-modal" class="page-header__button-callback callback-button js-open-modal">
+                <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#phone"></use>
+                </svg>
+                <span>Связаться</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="page-header__main-line page-header__main-line--mobile">
+        <div class="page-header__site-container">
+            <a href="/" class="page-header__logo logo">
+                <svg aria-hidden="true" class="icon icon-logo">
+                    <use xlink:href="#logo-mobile"></use>
+                </svg>
+            </a>
+
+            <a href="#callback-modal" class="page-header__phone phone js-open-modal">
+                <span class="phone__number">8 800 353 00 00</span>
+                <span class="phone__text">заказать звонок</span>
+            </a>
+
+            <button type="button" class="page-header__burger burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="page-header__breadcrumbs">
+        {{> breadcrumbs }}
+    </div>
+
+    <div class="page-header__mobile-menu mobile-menu">
+        <div class="mobile-menu__inner-wrapper">
+            <div class="mobile-menu__body">
+                <ul class="mobile-menu__list">
+                    <li>
+                        <a href="/" class="mobile-menu__link">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./page-services.html" class="mobile-menu__link">
+                            Услуги
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./page-contacts.html" class="mobile-menu__link">
+                            Контакты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./page-partners.html" class="mobile-menu__link">
+                            Партнёрам
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./page-vacancies.html" class="mobile-menu__link">
+                            Вакансии
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+78003530000" class="mobile-menu__link mobile-menu__link--phone">
+                            <span>Связаться</span>
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="mobile-menu__languages mobile-languages">
+                    <button type="button" class="mobile-languages__button js-mobile-languages-btn">
+                        <span class="mobile-languages__value">
+                            Russian
+                        </span>
+                        <span class="mobile-languages__arrow"></span>
+                    </button>
+
+                    <ul class="mobile-languages__list">
+                        <li class="mobile-languages__item">
+                            <label for="russian-language-id">
+                                Русский
+                            </label>
+                        </li>
+                        <li class="mobile-languages__item">
+                            <label for="english-language-id">
+                                English
+                            </label>
+                        </li>
+                        <li class="mobile-languages__item">
+                            <label for="chinese-language-id">
+                                中国人
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#callback-modal" class="mobile-menu__button-callback callback-button js-open-modal">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                    <span>Связаться</span>
+                </a>
+            </div>
+        </div>
     </div>
 </header>

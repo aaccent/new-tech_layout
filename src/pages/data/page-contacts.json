@@ -1,0 +1,12 @@
+{
+    "title": "Контакты",
+    "mainPage": false,
+    "lightForm": false,
+    "hiddenForm": true,
+    "lightHeader": false,
+    "articlePage": true,
+    "breadcrumbsList": [
+        "Главная",
+        "Контакты"
+    ]
+}

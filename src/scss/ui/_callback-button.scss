@@ -1,0 +1,31 @@
+.callback-button {
+    display: flex;
+    column-gap: 1rem;
+
+    .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        stroke: var(--black-100, #254558);
+        transition: var(--transition, 0.3s ease);
+    }
+
+    .icon-arrow {
+        stroke: transparent;
+        fill: var(--black-100, #254558);
+    }
+
+    span {
+        font: 400 1.8rem/1.5 var(--main-ff);
+    }
+
+    @include hover-active {
+        .icon {
+            stroke: var(--blue-100, #1ED2F4);
+        }
+
+        .icon-arrow {
+            stroke: transparent;
+            fill: var(--blue-100, #1ED2F4);
+        }
+    }
+}

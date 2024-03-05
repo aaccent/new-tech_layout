@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 6rem;
+
+    @include breakpoint(large-desktop) {
+        column-gap: 3rem;
+    }
+
+    &__link {
+        @include hover-active {
+            color: var(--blue-100, #1ED2F4);
+        }
+    }
+}

@@ -136,7 +136,7 @@
 
 @mixin breakpoint($class) {
     @if $class == large-desktop {
-        @media only screen and (max-width: (1600px)) {
+        @media only screen and (max-width: (1680px)) {
             @content;
         }
     } @else if $class == desktop {
@@ -149,6 +149,10 @@
         }
     } @else if $class == tablet {
         @media only screen and (max-width: (1024px)) {
+            @content;
+        }
+    } @else if $class == portrait-tablet {
+        @media only screen and (max-width: (992px)) {
             @content;
         }
     } @else if $class == small-tablet {
@@ -171,8 +175,12 @@
 }
 
 @mixin breakpointMF($class) {
-    @if $class == large-desktop {
-        @media only screen and (min-width: 1401px) {
+    @if $class == fullHd-desktop {
+        @media only screen and (min-width: 1921px) {
+            @content;
+        }
+    } @else if $class == large-desktop {
+        @media only screen and (min-width: 1681px) {
             @content;
         }
     } @else if $class == desktop {
@@ -181,6 +189,10 @@
         }
     } @else if $class == laptop {
         @media only screen and (min-width: 1025px) {
+            @content;
+        }
+    } @else if $class == portrait-tablet {
+        @media only screen and (min-width: 992px) {
             @content;
         }
     } @else if $class == tablet {
@@ -196,4 +208,44 @@
             @content;
         }
     }
+}
+
+@mixin hover-active {
+    &:hover {
+        .no-touch & {
+            @content;
+        }
+    }
+    &:active {
+        .touch & {
+            @content;
+        }
+    }
+}
+
+@mixin aspectRatio($class) {
+    @if $class == desktop {
+        @media only screen and (max-aspect-ratio: 16/8) {
+            @content;
+        }
+    } @else if $class == portrait {
+        @media only screen and (max-aspect-ratio: 4/3) {
+            @content;
+        }
+    }
+}
+
+
+@mixin onlyChromiumSupport() {
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+        @content;
+    }
+}
+
+
+@mixin maxSizeText($size) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $size;
+    -webkit-box-orient: vertical;
 }

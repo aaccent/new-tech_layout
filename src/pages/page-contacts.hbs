@@ -1,0 +1,104 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="padding-top-breadcrumbs simple-section simple-section--intro">
+    <h1 class="section-title visually-hidden">
+        Заголовок
+    </h1>
+
+    <div class="simple-section__site-container">
+        <div class="simple-section__row">
+            <h2 class="h2 simple-section__title">
+                Контакты
+            </h2>
+
+            <a href="./your_file_name.html" target="_blank" class="simple-section__details footer-menu__link">
+                <span>Реквизиты компании</span>
+                <svg class="icon icon-link">
+                    <use xlink:href="#link-arrow"></use>
+                </svg>
+            </a>
+        </div>
+
+        <div class="simple-section__contacts contacts">
+            <div class="contacts__header">
+                <ul class="advantages-section__list advantages-section__list--contacts">
+                    <li class="advantages-section__item">
+                        <span class="advantages-section__count">телефон</span>
+
+                        <div class="advantages-section__info">
+                            <img src="./img/contacts/phone.png" alt="contacts phone icon">
+
+                            <a href="#callback-modal"  class="page-header__phone phone js-open-modal">
+                                <span class="phone__number">8 800 353 00 00</span>
+                                <span class="phone__text">заказать звонок</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="advantages-section__item">
+                        <span class="advantages-section__count">email</span>
+
+                        <div class="advantages-section__info">
+                            <img src="./img/contacts/envelope.png" alt="contacts envelope icon">
+
+                            <a href="mailto:mail@example.com" class="page-header__phone phone">
+                                <span class="phone__number">mail@example.com</span>
+                                <span class="phone__text">написать Email</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="advantages-section__item">
+                        <span class="advantages-section__count">адрес</span>
+
+                        <div class="advantages-section__info">
+                            <img src="./img/contacts/map.png" alt="contacts map icon">
+
+                            <a href="https://yandex.ru/maps/-/CDFaFW0c" target="_blank" class="page-header__phone phone">
+                                <span class="phone__number">Казань, Баумана, 1</span>
+                                <span class="phone__text">Построить маршрут</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="advantages-section__item">
+                        <span class="advantages-section__count">социальные сети</span>
+
+                        <div class="advantages-section__info">
+                            <img class="visually-hidden" src="./img/contacts/map.png" alt="contacts map icon">
+
+                            <ul class="advantages-section__socials">
+                                <li>
+                                    <a href="#" class="social social--border social--dark">
+                                        <svg aria-hidden="true" class="icon icon-social">
+                                            <use xlink:href="#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social social--border social--dark">
+                                        <svg aria-hidden="true" class="icon icon-social">
+                                            <use xlink:href="#youtube"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social social--border social--dark">
+                                        <svg aria-hidden="true" class="icon icon-social">
+                                            <use xlink:href="#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contacts__map-wrapper">
+                <div class="contacts__map"  id="yamapsId" data-coords="55.795464, 49.108049"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

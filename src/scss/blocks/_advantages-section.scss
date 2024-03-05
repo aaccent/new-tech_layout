@@ -1,0 +1,194 @@
+.advantages-section {
+    &__title {
+        position: relative;
+        top: -0.5rem;
+        left: 0.5rem;
+        margin-bottom: 9rem;
+        line-height: 1.375;
+        text-align: center;
+
+        @include breakpoint(laptop) {
+            top: 0;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(24.3rem, 1fr);
+        align-items: stretch;
+
+        border-color: rgba($color: #fff, $alpha: 0.2);
+        border-style: solid;
+        border-width: 1px 0 1px 0;
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        @include breakpointMF(large-desktop) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(30.2rem, 1fr);
+        }
+
+
+        &--contacts {
+            border-color: rgba($color: #254558, $alpha: 0.2);
+
+            .advantages-section__item {
+                border-color: rgba($color: #254558, $alpha: 0.2);
+
+                &::after,
+                &::before {
+                    background-color: rgba($color: #254558, $alpha: 0.2);
+                }
+            }
+
+            .advantages-section__count {
+                color: var(--black-100, #254558);
+            }
+
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 2rem;
+
+        border-color: rgba($color: #fff, $alpha: 0.2);
+        border-style: solid;
+        border-width: 0 0 1px 0;
+
+        &:last-child {
+            border-width: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            border-width: 0;
+        }
+
+        @include breakpointMF(large-desktop) {
+            border-width: 0;
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+
+            width: 1px;
+            height: 5.3rem;
+
+            background-color: rgba($color: #fff, $alpha: 0.2);
+            content: none;
+
+            @include breakpointMF(portrait-tablet) {
+                content: "";
+            }
+
+            @include breakpointMF(large-desktop) {
+                content: "";
+            }
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+
+        &:nth-child(1n+3) {
+            @include breakpointMF(portrait-tablet) {
+                border-width: 1px 0 0 0;
+            }
+        }
+
+        &:nth-child(2n+2) {
+            &::after,
+            &::before {
+                content: none;
+
+                @include breakpointMF(large-desktop) {
+                    content: "";
+                }
+            }
+        }
+
+
+        &:nth-child(4n+4) {
+            &::after,
+            &::before {
+                @include breakpointMF(large-desktop) {
+                    content: none;
+                }
+            }
+        }
+
+        .phone__number {
+            margin-bottom: 1rem;
+
+            @include breakpoint(laptop) {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+
+    &__info {
+        img {
+            display: block;
+            width: 4.6rem;
+            height: 4.6rem;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        p {
+            max-width: 34rem;
+            margin-top: 2rem;
+            font: 500 2.6rem/1.26 var(--second-ff);
+
+            @include breakpoint(large-desktop) {
+                font: 500 2rem/1.25 var(--second-ff);
+            }
+
+            @include breakpoint(mobile) {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        > a {
+            margin-top: 2rem;
+        }
+
+        > ul {
+            margin-top: 2rem;
+        }
+    }
+
+    &__count {
+        display: block;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.2);
+        font: 300 1.4rem/1.2857 var(--second-ff);
+    }
+
+    &__socials {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2.8rem;
+    }
+}

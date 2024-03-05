@@ -1,0 +1,84 @@
+.cases-section {
+    &__title {
+        margin-bottom: 3rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__slider-wrapper {
+        position: relative;
+        padding-top: 12.7rem;
+        padding-bottom: 3.2rem;
+
+        @include breakpoint(portrait-tablet) {
+            padding-top: 7.5rem;
+            padding-bottom: unset;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    &__nav-swiper {
+        &.swiper {
+            @include breakpoint(portrait-tablet) {
+                margin-right: -1rem;
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    &__nav-swiper-slide {
+        &.swiper-slide {
+            width: max-content;
+
+            &.swiper-slide-thumb-active {
+                .case-tab {
+                    color: var(--black, #212529);
+                    border-color: var(--black, #212529);
+                }
+            }
+        }
+    }
+
+    &__swiper-button-next {
+        &.swiper-button-next {
+            position: absolute;
+            right: unset;
+            left: 4rem;
+            top: unset;
+            bottom: 4rem;
+            z-index: 10;
+
+            display: flex;
+            align-items: center;
+            column-gap: 1.5rem;
+            width: unset;
+            margin-top: unset;
+
+            color: var(--black-100, #254558);
+            cursor: pointer;
+
+            &::after {
+                font-size: 1.4rem;
+            }
+
+            @include breakpoint(laptop) {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            &.swiper-button-disabled {
+                opacity: 0;
+            }
+        }
+    }
+}

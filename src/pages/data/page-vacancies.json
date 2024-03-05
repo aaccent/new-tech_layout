@@ -1,0 +1,12 @@
+{
+    "title": "Вакансии",
+    "mainPage": false,
+    "lightForm": true,
+    "hiddenForm": false,
+    "lightHeader": false,
+    "articlePage": true,
+    "breadcrumbsList": [
+        "Главная",
+        "Вакансии"
+    ]
+}

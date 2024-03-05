@@ -1,0 +1,68 @@
+.seo-section {
+    &__header {
+        margin-bottom: 3rem;
+
+        @include breakpoint(small-mobile) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__text {
+        max-width: 80ch;
+
+        p {
+            display: inline;
+            margin-bottom: 2rem;
+            font-weight: 300;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include onlyChromiumSupport() {
+                display: block;
+            }
+
+            @include breakpoint(small-mobile) {
+                margin-bottom: 2rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__body {
+        .expand {
+            margin-top: 3.5rem;
+
+            &::after {
+                transform: rotate(180deg);
+            }
+
+            @include breakpoint(small-mobile) {
+                margin-top: 3rem;
+                margin-bottom: 0;
+            }
+        }
+
+        &--collapsed {
+            .seo-section__text {
+                @include maxSizeText(7);
+
+                @include breakpoint(small-mobile) {
+                    @include maxSizeText(14);
+                }
+            }
+
+            .expand {
+                display: flex;
+
+                &::after {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}

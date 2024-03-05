@@ -1,0 +1,180 @@
+.faq {
+    position: relative;
+    width: 100%;
+
+    border-color: var(--black-40, #A8B5BC);
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+
+    &__icon {
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M12%204.25C12.4142%204.25%2012.75%204.58579%2012.75%205V19C12.75%2019.4142%2012.4142%2019.75%2012%2019.75C11.5858%2019.75%2011.25%2019.4142%2011.25%2019V5C11.25%204.58579%2011.5858%204.25%2012%204.25Z%22%20fill%3D%22%237C8F9B%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M4.25%2012C4.25%2011.5858%204.58579%2011.25%205%2011.25H19C19.4142%2011.25%2019.75%2011.5858%2019.75%2012C19.75%2012.4142%2019.4142%2012.75%2019%2012.75H5C4.58579%2012.75%204.25%2012.4142%204.25%2012Z%22%20fill%3D%22%237C8F9B%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: var(--transition);
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2rem;
+
+        width: 100%;
+        padding: 1.9rem;
+
+        color: var(--black, #212529);
+        transition: color var(--transition);
+        cursor: pointer;
+
+
+        &::after,
+        &::before {
+            position: absolute;
+            top: 0;
+            background-color: var(--black-40, #A8B5BC);
+            width: 1px;
+            height: 5.3rem;
+            opacity: 0;
+            transition: var(--transition);
+            content: "";
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+
+        @include hover-active {
+            .faq__question {
+                color: var(--black-100, #254558);
+            }
+
+            .faq__icon {
+                animation-name: spinner;
+                animation-duration: 300ms;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+            }
+        }
+    }
+
+    &__question {
+        @include maxSizeText(1);
+        color: var(--black-60, #7C8F9B);
+        font: 400 2.4rem/1.25 var(--second-ff);
+        transition: 0.3s;
+
+        @include breakpoint(tablet) {
+            font: 400 2rem/1.25 var(--second-ff);
+        }
+    }
+
+    &__dropdown {
+        position: relative;
+
+        max-height: 0;
+        padding-top: 0;
+        padding-left: 2rem;
+        padding-bottom: 0;
+        padding-right: 2rem;
+
+        opacity: 0;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition-duration: 0.4s;
+        transition-property: max-height, opacity, transform, padding;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        @include breakpoint(tablet) {
+
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            top: unset;
+            bottom: 0;
+            background-color: var(--black-40, #A8B5BC);
+            width: 1px;
+            height: 5.3rem;
+            content: "";
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-weight: 300;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include breakpoint(tablet) {
+                font: 300 1.6rem/1.5 var(--main-ff);;
+            }
+        }
+    }
+
+
+    input {
+        &:checked {
+            ~ .faq__button {
+                &::after,
+                &::before {
+                    opacity: 1;
+                }
+                .faq__question {
+                    color: var(--black-100, #254558);
+                }
+
+                .faq__icon {
+                    transform: rotate(45deg);
+                }
+
+                @include hover-active {
+                    .faq__icon {
+                        animation: unset;
+                    }
+                }
+            }
+
+            ~ .faq__dropdown {
+                max-height: 500px;
+                opacity: 1;
+                transform: scaleY(1);
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+
+                @include breakpoint(tablet) {
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

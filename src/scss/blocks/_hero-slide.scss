@@ -1,0 +1,72 @@
+.hero-slide {
+    &__double-grid {
+        padding: 4.5rem 0 16rem;
+
+        @include breakpoint(laptop) {
+            grid-template-columns: 100%
+        }
+
+        @include breakpoint(small-tablet) {
+            padding: 10rem 0 15.2rem;
+        }
+    }
+
+    &__right {
+        padding-right: 10rem;
+
+
+        @include breakpoint(laptop) {
+            grid-column: 1;
+            padding: 0 10rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+        max-width: 24ch;
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+
+        @include breakpoint(small-tablet) {
+            margin-bottom: 2.1rem;
+            padding-bottom: 2.1rem;
+        }
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+            width: calc(100% - 5.6rem);
+            height: 1px;
+            background-color: rgba($color: #254558, $alpha: 0.2);
+            content: "";
+        }
+    }
+
+    &__text {
+        max-width: 70ch;
+        margin-bottom: 3rem;
+        padding-right: 5.6rem;
+        opacity: 0.8;
+
+        @include breakpoint(mobile) {
+            padding-right: unset;
+        }
+    }
+
+    &__button {
+        &.button {
+            width: max-content;
+
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
+        }
+    }
+}

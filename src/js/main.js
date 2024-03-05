@@ -1,36 +1,36 @@
 import './lazyload';
 import detectTouch from './detectTouch';
-import setScrollbarWidth from './setScrollbarWidth';
 import masks from './masks';
-import validation from './validation';
-import anchorLinks from './anchorLinks';
-import accordions from './accordions';
-import modals from './modals';
-import tabs from './tabs';
 import menu from './menu';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import validation from './validation';
+import fancybox from './fancybox.js';
+import modals from './modals';
 
-gsap.registerPlugin(ScrollTrigger);
+import mapInit from './mapInit.js';
+import setScrollbarWidth from './setScrollbarWidth';
+import setHeaderPadding from './setHeaderPadding';
+import setBreadcrumbsPadding from './setBreadcrumbsPadding';
+import changeLanguages from './changeLanguages';
+import seoTextExpand from './seoTextExpand';
+import heroDoubleSwiper from './heroDoubleSwiper.js';
+import casesSwiper from './casesSwiper.js';
+import gallerySwipers from './gallerySwipers.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
-    setScrollbarWidth();
     masks();
-    validation();
-    anchorLinks();
-    accordions();
-    modals();
-    tabs();
     menu();
-});
+    validation();
+    fancybox();
+    modals();
 
-document.addEventListener('lazyloaded', () => {
-    ScrollTrigger.refresh();
-});
-
-window.addEventListener('load', function () {
-    document.body.classList.add('loaded');
-    ScrollTrigger.refresh();
-    setTimeout(() => document.body.classList.add('animatable'), 300);
+    mapInit();
+    setScrollbarWidth();
+    setHeaderPadding();
+    setBreadcrumbsPadding();
+    changeLanguages();
+    seoTextExpand();
+    heroDoubleSwiper();
+    casesSwiper();
+    gallerySwipers();
 });

@@ -1,0 +1,32 @@
+.phone {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        display: block;
+        transition: var(--transition);
+    }
+
+    &__number {
+        margin-bottom: 0.3rem;
+        font: var(--font-h-second-22);
+        transition: var(--transition);
+
+        @include breakpoint(laptop) {
+            font:  600 1.6rem/1.27 var(--second-ff);
+        }
+    }
+
+    &__text {
+        font: var(--font-p-main-14);
+        opacity: 0.8;
+        transition: var(--transition);
+    }
+
+    @include hover-active {
+        .phone__text {
+            color: var(--blue-100, #1ED2F4);
+            opacity: 1;
+        }
+    }
+}

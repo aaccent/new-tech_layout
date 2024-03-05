@@ -1,0 +1,68 @@
+.breadcrumbs {
+    ul {
+        display: flex;
+        align-items: center;
+        padding: 4rem 0 2rem;
+
+        @include breakpoint(tablet) {
+            padding: 3rem 0;
+        }
+
+        li {
+            position: relative;
+            padding-right: 1.5rem;
+            padding-left: 1rem;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 1;
+                transform: translateY(-50%);
+                display: block;
+                color: inherit;
+                font: 300 1.8rem/1.5 var(--second-ff);
+                content: '/';
+            }
+
+            &:last-child {
+                &::after {
+                    content: none;
+                }
+
+                a {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        color: inherit;
+        font: 300 1.8rem/1.5 var(--second-ff);
+        pointer-events: none;
+
+        @include breakpoint(tablet) {
+            font: 300 1.6rem/1.5 var(--second-ff);
+        }
+    }
+
+    &--large-padding-top {
+        .breadcrumbs__list {
+            @include breakpoint(laptop) {
+                padding: 10rem 0 3rem;
+            }
+        }
+    }
+
+    &--low-paddings {
+        ul {
+            padding: 3rem 0 2rem;
+        }
+    }
+}

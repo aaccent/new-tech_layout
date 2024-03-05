@@ -1,0 +1,12 @@
+{
+    "title": "Услуги",
+    "mainPage": false,
+    "lightForm": true,
+    "hiddenForm": false,
+    "lightHeader": true,
+    "largeBreadcrumbsPadding": true,
+    "breadcrumbsList": [
+        "Главная",
+        "Услуги"
+    ]
+}

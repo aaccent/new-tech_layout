@@ -1,0 +1,81 @@
+<div class="modal js-modal" id="callback-modal">
+    <div class="modal__container">
+        <div class="modal__body">
+            <div class="modal__picture-wrapper">
+                <picture>
+                    <source type="image/webp" srcset="./img/modal/picture.webp"
+                        alt="wind generator image" />
+                    <img class="lazy" src="./img/modal/picture.jpg"
+                        alt="wind generator image" />
+                </picture>
+            </div>
+            <div class="modal__form-wrapper">
+                <div class="modal__callback callback callback--column">
+                    <div class="callback__left">
+                        <h3 class="callback__title h3">
+                            Остались вопросы?<br>
+                            Задайте их менеджеру<br>
+                            NewTechnologies
+                        </h3>
+                        <p class="callback__text">
+                            Оставьте заявку, менеджер перезвонит, ответит<br>
+                            на вопросы, и поможет сформировать заявку
+                        </p>
+                    </div>
+                    <div class="callback__right">
+                        <form action="" class="callback__form form" data-need-validation>
+                            <div class="form__rows">
+                                <div class="form__row">
+                                    <input
+                                        class="form__input input input--black js-text-input"
+                                        type="text"
+                                        name="callback-name-modal"
+                                        id="callback-name-modal"
+                                        placeholder="Имя"
+                                        autocomplete="off"
+                                        required
+                                        data-parsley-reqtext
+                                    >
+                                </div>
+
+                                <div class="form__row">
+                                    <input
+                                        class="form__input input input--black js-phone-input"
+                                        type="tel"
+                                        name="callback-phone-modal"
+                                        id="callback-phone-modal"
+                                        placeholder="+ 7 (999) 999-99-99"
+                                        autocomplete="off"
+                                        required
+                                        data-parsley-phone
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="form__submit">
+                                <button type="submit" class="button form__button">
+                                    <span>Оставить заявку</span>
+                                    <svg class="icon icon-enter">
+                                        <use xlink:href="#enter"></use>
+                                    </svg>
+                                </button>
+                                <div class="form__agreement">
+                                    <p>
+                                        <span>Нажимая на кнопку, я соглашусь<br> с&nbsp;</span>
+                                        <a href="#">политикой конфиденциальности</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="modal__close js-close-modal">
+            <svg aria-hidden="true" class="icon icon-close">
+                <use xlink:href="#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{
+    "title": "Партнёрам",
+    "mainPage": false,
+    "lightForm": false,
+    "hiddenForm": false,
+    "lightHeader": false,
+    "articlePage": true,
+    "breadcrumbsList": [
+        "Главная",
+        "Партнёрам"
+    ]
+}

@@ -1,15 +1,974 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
+<section class="home padding-top-header">
+    <div class="home__images-slider">
+        <div id="home-images-swiper" class="home__images-swiper swiper">
+            <ul class="home__swiper-wrapper swiper-wrapper">
+                <li class="home__swiper-slide swiper-slide">
+                    <picture>
+                        <source media="(max-width: 992px)" type="image/webp" srcset="./img/hero/pic-mobile.webp" alt="hero image"/>
+                        <source media="(min-width: 992px)" type="image/webp" srcset="./img/hero/pic.webp" alt="hero image"/>
+                        <img class="lazy" src="./img/hero/pic.jpg"
+                            alt="wind generator image" />
+                    </picture>
+                </li>
+                <li class="home__swiper-slide swiper-slide">
+                    <picture>
+                        <source media="(max-width: 992px)" type="image/webp" srcset="./img/hero/pic-mobile.webp" alt="hero image"/>
+                        <source media="(min-width: 992px)" type="image/webp" srcset="./img/hero/pic-2.webp" alt="hero image"/>
+                        <img class="lazy" src="./img/hero/pic.jpg"
+                            alt="wind generator image" />
+                    </picture>
+                </li>
+                <li class="home__swiper-slide swiper-slide">
+                    <picture>
+                        <source media="(max-width: 992px)" type="image/webp" srcset="./img/hero/pic-mobile.webp" alt="hero image"/>
+                        <source media="(min-width: 992px)" type="image/webp" srcset="./img/hero/pic.webp" alt="hero image"/>
+                        <img class="lazy" src="./img/hero/pic.jpg"
+                            alt="wind generator image" />
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-<section class="home">
-    <div class="container">
-        <h1>
-            Home
-        </h1>
+
+    <div class="home__info-slider">
+        <div class="home__site-container">
+            <div id="home-info-swiper" class="home__info-swiper swiper">
+                <ul class="home__info-swiper-wrapper swiper-wrapper">
+                    <li class="home__info-swiper-slide swiper-slide hero-slide">
+                        <div class="hero-slide__double-grid double-grid" data-swiper-parallax-x="-500">
+                            <div class="hero-slide__right double-grid__right">
+                                <h2 class="h2 hero-slide__title">
+                                    Доставляем оборудование
+                                    из Китая с гарантией
+                                </h2>
+
+                                <p class="hero-slide__text">
+                                    Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман семантически
+                                    отражает хорей. Представленный лексико-семантический анализ является
+                                    психолингвистическим в своей основе, но графомания возможна.
+                                </p>
+
+                                <a href="#callback-modal" class="hero-slide__button button js-open-modal" data-swiper-parallax-opacity="0.1">
+                                    <span>Оставить заявку</span>
+                                    <svg class="icon icon-enter">
+                                        <use xlink:href="#enter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="home__info-swiper-slide swiper-slide hero-slide">
+                        <div class="hero-slide__double-grid double-grid" data-swiper-parallax-x="-500">
+                            <div class="hero-slide__right double-grid__right">
+                                <h2 class="h2 hero-slide__title">
+                                    1Доставляем оборудование
+                                    из Китая с гарантией
+                                </h2>
+
+                                <p class="hero-slide__text">
+                                    Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман семантически
+                                    отражает хорей. Представленный лексико-семантический анализ является
+                                    психолингвистическим в своей основе, но графомания возможна.
+                                </p>
+
+                                <a href="#callback-modal" class="hero-slide__button button js-open-modal" data-swiper-parallax-opacity="0.1">
+                                    <span>Оставить заявку</span>
+                                    <svg class="icon icon-enter">
+                                        <use xlink:href="#enter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="home__info-swiper-slide swiper-slide hero-slide">
+                        <div class="hero-slide__double-grid double-grid" data-swiper-parallax-x="-500">
+                            <div class="hero-slide__right double-grid__right">
+                                <h2 class="h2 hero-slide__title">
+                                    2Доставляем оборудование
+                                    из Китая с гарантией
+                                </h2>
+
+                                <p class="hero-slide__text">
+                                    Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман семантически
+                                    отражает хорей. Представленный лексико-семантический анализ является
+                                    психолингвистическим в своей основе, но графомания возможна.
+                                </p>
+
+                                <a href="#callback-modal" class="hero-slide__button button js-open-modal" data-swiper-parallax-opacity="0.1">
+                                    <span>Оставить заявку</span>
+                                    <svg class="icon icon-enter">
+                                        <use xlink:href="#enter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="swiper-button-prev home__swiper-button home__swiper-button-prev"></div>
+                <div class="swiper-button-next home__swiper-button home__swiper-button-next"></div>
+
+                <div class="home__swiper-pagination">
+                    <div class="double-grid">
+
+                        <div class="double-grid__right">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<section class="section services-section">
+    <div class="services-section__site-container">
+        <h2 class="h2 services-section__title">
+            <span class="hide-on-mobile">
+                Полный&nbsp;комплекс&nbsp;услуг<br>
+                по&nbsp;доставке&nbsp;оборудования&nbsp;из&nbsp;Китая
+            </span>
+
+            <span class="show-on-mobile">
+                Доставляем&nbsp;оборудование<br>
+                из&nbsp;Китая&nbsp;с&nbsp;гарантией
+            </span>
+        </h2>
+
+        <ul class="services-section__list">
+            <li class="services-section__item">
+                <a id="services-id-1" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li class="services-section__item">
+                <a id="services-id-2" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li class="services-section__item">
+                <a id="services-id-3" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li class="services-section__item">
+                <a id="services-id-4" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li class="services-section__item">
+                <a id="services-id-5" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li class="services-section__item">
+                <a id="services-id-6" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li class="services-section__item">
+                <a id="services-id-7" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li class="services-section__item">
+                <a id="services-id-8" href="#" class="services-section__link service-link">
+                    <p class="service-link__name">
+                        Длинное название услуги в несколько строк
+                    </p>
+
+                    <div class="service-link__image-wrapper">
+                        <div class="service-link__hover-image">
+                            <div class="service-link__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/services/pic.webp" alt="hero image"/>
+                                    <img class="lazy" src="./img/services/pic.jpg"
+                                        alt="wind generator image" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="button button--oulined service-link__button">
+                        <span>Подробнеее</span>
+                        <svg class="icon icon-enter">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </button>
+
+                    <span class="service-link__icon">
+                        <svg class="icon">
+                            <use xlink:href="#enter"></use>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="presentation">
+    <div class="presentation__site-container">
+        <div class="presentation__top">
+            <div class="presentation__double-grid double-grid">
+                <div class="presentation__left double-grid__left">
+                    <h3 class="h3 presentation__title">
+                        New Technologies — профессиональные операторы на рынке
+                        российско-китайской торговли с 2010 года
+                    </h3>
+                </div>
+                <div class="presentation__right double-grid__right">
+                    <div class="presentation__text">
+                        <p>
+                            Для успешного ведения работы с Китайской Народной Республикой мы
+                            готовы предложить комплексный подход и качественный сервис по
+                            организации производства и поставке товаров. Грамотно выстроенная
+                            инфраструктура и специальные сервисы позволяют вести бизнес с
+                            Китаем максимально просто и эффективно.
+                        </p>
+                        <p>
+                            Наша цель - сделать работу с Поднебесной прозрачной, безопасной и выгодной.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="presentation__bottom">
+            <div class="presentation__picture">
+                <picture>
+                    <source type="image/webp" srcset="./img/presentation/pic.webp" alt="team image"/>
+                    <img class="lazy" src="./img/presentation/pic.jpg"
+                        alt="team image" />
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="advantages-section section color-white bg-black">
+    <div class="advantages-section__site-container">
+        <h1 class="advantages-section__title h1">
+            <p>
+                <span class="color-yellow">New Technologies&nbsp;</span>
+                <span>выбирают</span>
+            </p>
+            <p>
+                <span>тысячи людей&nbsp;</span>
+                <span class="color-yellow"> по всему миру</span>
+            </p>
+        </h1>
+
+        <ul class="advantages-section__list">
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">01</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/trending-up.png" alt="advantages trending up icon">
+
+                    <p>
+                        Обеспечиваем&nbsp;<span class="color-yellow">высокий<br> уровень</span>&nbsp;автоматизации<br> и диспетчеризации
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">02</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/thumb-up.png" alt="advantages thumb up icon">
+
+                    <p>
+                        <span class="color-yellow">3000 +</span>&nbsp;клиентов<br> доверили свои бизнес&shy;-процеессы
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">03</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/transport.png" alt="advantages transport icon">
+
+                    <p>
+                        <span class="color-yellow">Быстрая доставка</span><br> оборудования&nbsp;с<br> гарантией
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">04</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/support.png" alt="advantages support icon">
+
+                    <p>
+                        Все сделки&nbsp;<span class="color-yellow">проводятся с договорами</span>&nbsp;и гарантией&nbsp;с<br> нашей стороны
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">05</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/trending-up.png" alt="advantages trending up icon">
+
+                    <p>
+                        Обеспечиваем&nbsp;<span class="color-yellow">высокий<br> уровень</span>&nbsp;автоматизации<br> и диспетчеризации
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">06</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/thumb-up.png" alt="advantages thumb up icon">
+
+                    <p>
+                        <span class="color-yellow">3000 +</span>&nbsp;клиентов<br> доверили свои бизнес&shy;-процеессы
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">07</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/transport.png" alt="advantages transport icon">
+
+                    <p>
+                        <span class="color-yellow">Быстрая доставка</span><br> оборудования&nbsp;с<br> гарантией
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">08</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/support.png" alt="advantages support icon">
+
+                    <p>
+                        Все сделки&nbsp;<span class="color-yellow">проводятся с договорами</span>&nbsp;и гарантией&nbsp;с<br> нашей стороны
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="section cases-section">
+    <div class="cases-section__site-container">
+        <h2 class="h2 cases-section__title">
+            Кейсы
+        </h2>
+
+        <div class="cases-section__slider-wrapper js-cases-swiper-box">
+            <div class="cases-section__navigation">
+                <div class="cases-section__nav-swiper swiper js-tabs-swiper">
+                    <ul class="cases-section__nav-swiper-wrapper swiper-wrapper">
+                        <!--
+                        <li class="cases-section__nav-swiper-slide swiper-slide">
+                            <button type="button" class="case-tab" data-tab="1">
+                                Название кейса
+                            </button>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cases-section__swiper swiper js-cases-swiper">
+                <ul class="cases-section__swiper-wrapper swiper-wrapper">
+                    <li class="cases-section__swiper-slide swiper-slide case-slide">
+                        <div class="case-slide__double-grid double-grid">
+                            <div class="case-slide__left double-grid__left">
+                                <div class="case-slide__desc">
+                                    <span class="h3 case-slide__name">
+                                        Название кейса
+                                    </span>
+
+                                    <div class="case-slide__text">
+                                        <p>
+                                            Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                            семантически отражает хорей. Представленный  лексико-семантический
+                                            анализ является психолингвистическим в своей основе, но графомания
+                                            возможна.
+                                        </p>
+                                        <p>
+                                            Подтекст, если уловить хореический ритм или аллитерац ию на "р",
+                                            иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                            Субъективное восприятие вразнобой нивелирует дольник. Ритмический рисунок,
+                                            чтобы уловить хореический ритм или аллитерацию на "л", неумеренно начинает
+                                            ритм.
+                                        </p>
+                                        <p>
+                                            Представленный лексико-семантический анализ является психолингвистическим
+                                            в своей основе, но графомания возможна.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-slide__right double-grid__right">
+                                <div class="case-slide__image">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/cases/pic.webp" alt="hero image"/>
+                                        <img class="lazy" src="./img/cases/pic.jpg"
+                                            alt="robot image" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cases-section__swiper-slide swiper-slide case-slide">
+                        <div class="case-slide__double-grid double-grid">
+                            <div class="case-slide__left double-grid__left">
+                                <div class="case-slide__desc">
+                                    <span class="h3 case-slide__name">
+                                        Название кейса 2
+                                    </span>
+
+                                    <div class="case-slide__text">
+                                        <p>
+                                            Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                            семантически отражает хорей. Представленный  лексико-семантический
+                                            анализ является психолингвистическим в своей основе, но графомания
+                                            возможна.
+                                        </p>
+                                        <p>
+                                            Подтекст, если уловить хореический ритм или аллитерац ию на "р",
+                                            иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                            Субъективное восприятие вразнобой нивелирует дольник. Ритмический рисунок,
+                                            чтобы уловить хореический ритм или аллитерацию на "л", неумеренно начинает
+                                            ритм.
+                                        </p>
+                                        <p>
+                                            Представленный лексико-семантический анализ является психолингвистическим
+                                            в своей основе, но графомания возможна.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-slide__right double-grid__right">
+                                <div class="case-slide__image">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/cases/pic.webp" alt="hero image"/>
+                                        <img class="lazy" src="./img/cases/pic.jpg"
+                                            alt="robot image" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cases-section__swiper-slide swiper-slide case-slide">
+                        <div class="case-slide__double-grid double-grid">
+                            <div class="case-slide__left double-grid__left">
+                                <div class="case-slide__desc">
+                                    <span class="h3 case-slide__name">
+                                        Название кейса 3
+                                    </span>
+
+                                    <div class="case-slide__text">
+                                        <p>
+                                            Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                            семантически отражает хорей. Представленный  лексико-семантический
+                                            анализ является психолингвистическим в своей основе, но графомания
+                                            возможна.
+                                        </p>
+                                        <p>
+                                            Подтекст, если уловить хореический ритм или аллитерац ию на "р",
+                                            иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                            Субъективное восприятие вразнобой нивелирует дольник. Ритмический рисунок,
+                                            чтобы уловить хореический ритм или аллитерацию на "л", неумеренно начинает
+                                            ритм.
+                                        </p>
+                                        <p>
+                                            Представленный лексико-семантический анализ является психолингвистическим
+                                            в своей основе, но графомания возможна.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-slide__right double-grid__right">
+                                <div class="case-slide__image">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/cases/pic.webp" alt="hero image"/>
+                                        <img class="lazy" src="./img/cases/pic.jpg"
+                                            alt="robot image" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cases-section__swiper-slide swiper-slide case-slide">
+                        <div class="case-slide__double-grid double-grid">
+                            <div class="case-slide__left double-grid__left">
+                                <div class="case-slide__desc">
+                                    <span class="h3 case-slide__name">
+                                        Название кейса 4
+                                    </span>
+
+                                    <div class="case-slide__text">
+                                        <p>
+                                            Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                            семантически отражает хорей. Представленный  лексико-семантический
+                                            анализ является психолингвистическим в своей основе, но графомания
+                                            возможна.
+                                        </p>
+                                        <p>
+                                            Подтекст, если уловить хореический ритм или аллитерац ию на "р",
+                                            иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                            Субъективное восприятие вразнобой нивелирует дольник. Ритмический рисунок,
+                                            чтобы уловить хореический ритм или аллитерацию на "л", неумеренно начинает
+                                            ритм.
+                                        </p>
+                                        <p>
+                                            Представленный лексико-семантический анализ является психолингвистическим
+                                            в своей основе, но графомания возможна.
+                                        </p>
+                                        <p>
+                                            Подтекст, если уловить хореический ритм или аллитерац ию на "р",
+                                            иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                            Субъективное восприятие вразнобой нивелирует дольник. Ритмический рисунок,
+                                            чтобы уловить хореический ритм или аллитерацию на "л", неумеренно начинает
+                                            ритм.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-slide__right double-grid__right">
+                                <div class="case-slide__image">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/cases/pic.webp" alt="hero image"/>
+                                        <img class="lazy" src="./img/cases/pic.jpg"
+                                            alt="robot image" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="swiper-button-next cases-section__swiper-button-next">
+                    Следующий кейс
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section faq-section--bordered">
+    <div class="faq-section__site-container">
+        <h2 class="h2 faq-section__title">
+            Отвечаем на популярные вопросы
+        </h2>
+
+        <div class="double-grid faq-section__double-grid">
+            <div class="faq-section__left double-grid__left">
+                <ul class="faq-section__list">
+                    <li class="faq-section__item faq">
+                        <input class="visually-hidden" checked hidden type="radio" name="faq-radio" id="faq-1">
+                        <label for="faq-1" class="faq__button">
+                            <span class="faq__question">
+                                Вопрос в одну строку
+                            </span>
+
+                            <span class="faq__icon"></span>
+                        </label>
+                        <div class="faq__dropdown">
+                            <p>
+                                Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                семантически отражает хорей. Представленный лексико-семантический
+                                анализ является психолингвистическим в своей основе, но графомания
+                                возможна
+                            </p>
+                            <p>
+                                Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                                иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                                рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                                неумеренно начинает ритм.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-section__item faq">
+                        <input class="visually-hidden" hidden type="radio" name="faq-radio" id="faq-2">
+                        <label for="faq-2" class="faq__button">
+                            <span class="faq__question">
+                                Вопрос в одну строку
+                            </span>
+
+                            <span class="faq__icon"></span>
+                        </label>
+                        <div class="faq__dropdown">
+                            <p>
+                                Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                семантически отражает хорей. Представленный лексико-семантический
+                                анализ является психолингвистическим в своей основе, но графомания
+                                возможна
+                            </p>
+                            <p>
+                                Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                                иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                                рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                                неумеренно начинает ритм.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-section__item faq">
+                        <input class="visually-hidden" hidden type="radio" name="faq-radio" id="faq-3">
+                        <label for="faq-3" class="faq__button">
+                            <span class="faq__question">
+                                Вопрос в одну строку
+                            </span>
+
+                            <span class="faq__icon"></span>
+                        </label>
+                        <div class="faq__dropdown">
+                            <p>
+                                Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                семантически отражает хорей. Представленный лексико-семантический
+                                анализ является психолингвистическим в своей основе, но графомания
+                                возможна
+                            </p>
+                            <p>
+                                Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                                иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                                рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                                неумеренно начинает ритм.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-section__item faq">
+                        <input class="visually-hidden" hidden type="radio" name="faq-radio" id="faq-4">
+                        <label for="faq-4" class="faq__button">
+                            <span class="faq__question">
+                                Вопрос в одну строку
+                            </span>
+
+                            <span class="faq__icon"></span>
+                        </label>
+                        <div class="faq__dropdown">
+                            <p>
+                                Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                семантически отражает хорей. Представленный лексико-семантический
+                                анализ является психолингвистическим в своей основе, но графомания
+                                возможна
+                            </p>
+                            <p>
+                                Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                                иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                                рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                                неумеренно начинает ритм.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-section__item faq">
+                        <input class="visually-hidden" hidden type="radio" name="faq-radio" id="faq-5">
+                        <label for="faq-5" class="faq__button">
+                            <span class="faq__question">
+                                Вопрос в одну строку
+                            </span>
+
+                            <span class="faq__icon"></span>
+                        </label>
+                        <div class="faq__dropdown">
+                            <p>
+                                Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                семантически отражает хорей. Представленный лексико-семантический
+                                анализ является психолингвистическим в своей основе, но графомания
+                                возможна
+                            </p>
+                            <p>
+                                Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                                иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                                рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                                неумеренно начинает ритм.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-section__item faq">
+                        <input class="visually-hidden" hidden type="radio" name="faq-radio" id="faq-6">
+                        <label for="faq-6" class="faq__button">
+                            <span class="faq__question">
+                                Вопрос в одну строку
+                            </span>
+
+                            <span class="faq__icon"></span>
+                        </label>
+                        <div class="faq__dropdown">
+                            <p>
+                                Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                                семантически отражает хорей. Представленный лексико-семантический
+                                анализ является психолингвистическим в своей основе, но графомания
+                                возможна
+                            </p>
+                            <p>
+                                Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                                иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                                Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                                рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                                неумеренно начинает ритм.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="faq-section__right double-grid__right">
+                <div class="faq-section__image-wrapper">
+                    <div class="faq-section__picture">
+                        <picture>
+                            <source type="image/webp" srcset="./img/faq/pic.webp" alt="hero image"/>
+                            <img class="lazy" src="./img/faq/pic.jpg"
+                                alt="city image" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="seo-section section">
+    <div class="seo-section__site-container">
+        <div class="double-grid double-grid--wrap">
+            <div class="double-grid__left">
+                <h2 class="h2">
+                    СЕО заголовок<br>
+                    в несколько строк
+                </h2>
+            </div>
+            <div class="double-grid__right seo-section__body seo-section__body--collapsed">
+
+                <div class="seo-section__text">
+                    <p>
+                        Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                        семантически отражает хорей. Представленный лексико-семантический
+                        анализ является психолингвистическим в своей основе, но графомания
+                        возможна.
+                    </p>
+
+                    <p>
+                        Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                        иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                        Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                        рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                        неумеренно начинает ритм.
+                    </p>
+
+                    <p>
+                        Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                        семантически отражает хорей. Представленный лексико-семантический
+                        анализ является психолингвистическим в своей основе, но графомания
+                        возможна.
+                    </p>
+
+                    <p>
+                        Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                        иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                        Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                        рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                        неумеренно начинает ритм.
+                    </p>
+                </div>
+
+                <button class="expand js-seo-expand" data-text="Читать полностью"></button>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 {{/content}}
 {{/extend}}

@@ -1,0 +1,25 @@
+.input {
+    padding: 2.4rem 0;
+
+    color: var(--white-color, #fff);
+    font: var(--font-p-second-18);
+
+    border-color: var(--white-color, #fff);
+    border-style: solid;
+    border-width: 0 0 1px 0;
+
+    @include placeholder {
+        color: var(--white-color, #fff);
+        font: var(--font-p-second-18);
+        opacity: 0.6;
+    }
+
+    &--black {
+        color: var(--black-100, #254558);
+        border-color: var(--black-100, #254558);
+
+        @include placeholder {
+            color: var(--black-100, #254558);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<div class="breadcrumbs {{#if largeBreadcrumbsPadding}}breadcrumbs--large-padding-top{{/if}} {{#if articlePage}}breadcrumbs--low-paddings{{/if}}">
+    <div class="page-header__site-container">
+        <ul class="breadcrumbs__list">
+            {{#each breadcrumbsList}}
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">
+                        {{ this }}
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

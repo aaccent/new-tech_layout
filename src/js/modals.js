@@ -6,7 +6,6 @@ export default function modals() {
     function openModal(id, event) {
         const modal = document.querySelector(`.js-modal${id}`);
         if (!modal) {
-            // console.error(`Modal with ID: ${id} not found`);
             return;
         }
 
@@ -17,8 +16,7 @@ export default function modals() {
         if (event) {
             event.preventDefault();
         }
-
-        console.log('Opening modal', modal);
+        // console.log('Opening modal', modal);
 
         const openHandler = () => {
             lockScroll(modal, {
@@ -26,11 +24,13 @@ export default function modals() {
             });
             modal.classList.add('active');
             document.body.classList.add('modal-open');
+            document.querySelector('.burger').classList.add('burger--modal-open');
             window.activeModal = modal;
 
             const openModalEvent = new CustomEvent('openmodal');
             document.dispatchEvent(openModalEvent);
         };
+
         if (window.activeModal) {
             closeModal(window.activeModal);
 

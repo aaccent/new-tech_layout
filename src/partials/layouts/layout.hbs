@@ -17,7 +17,7 @@
         {{> sprite }}
     </div>
 
-    <div class="page-content">
+    <div class="page-content {{#if mainPage}} page-content--main{{/if}}">
         {{> header }}
         <main class="page-main">
             {{#block "main"}}
@@ -25,6 +25,7 @@
             {{/block}}
         </main>
         {{> footer }}
+        {{> modal }}
         {{> ie-placeholder }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/app.js"></script>

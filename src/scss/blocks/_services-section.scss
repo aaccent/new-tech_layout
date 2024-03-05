@@ -1,0 +1,31 @@
+.services-section {
+    &__title {
+        margin-bottom: 5rem;
+
+        @include breakpoint(laptop) {
+            margin-bottom: 3rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__item {
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+
+            .services-section__link {
+                &::before {
+                    content: none;
+
+                    @include breakpoint(laptop) {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.1rem;
+
+    padding: 2.3rem 4rem;
+    background-color: var(--black-100, #254558);
+    transition: var(--transition, 0.3s ease);
+
+    span {
+        font: 400 1.8rem/1.16 var(--main-ff);;
+        white-space: nowrap;
+        color: var(--white-color, #fff);
+        transition: var(--transition, 0.3s ease);
+    }
+
+    .icon-enter {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: var(--white-color, #fff);
+        transition: var(--transition, 0.3s ease);
+    }
+
+    @include hover-active {
+        span {
+            color: var(--yellow-100, #EAFC40);
+        }
+
+        .icon-enter {
+            fill: var(--yellow-100, #EAFC40);
+        }
+    }
+
+    &--oulined {
+        background-color: transparent;
+        border: 1px solid var(--black-100, #254558);
+
+        span {
+            color: var(--black-100, #254558);
+        }
+
+        .icon-enter {
+            fill: var(--black-100, #254558);
+        }
+
+
+        @include hover-active {
+            background-color: var(--black-100, #254558);
+
+            span {
+                color: var(--white-color, #fff);
+            }
+
+            .icon-enter {
+                fill: var(--white-color, #fff);
+            }
+        }
+    }
+
+    &--second {
+        background-color: var(--yellow-100, #EAFC40);
+        box-shadow: 0px 0px 74px rgba(234, 252, 64, 0.21);
+
+        span {
+            color: var(--black-100, #254558);
+        }
+
+        .icon-enter {
+            fill: var(--black-100, #254558);
+        }
+    }
+
+    &--smaller {
+        padding: 1.4rem 2rem;
+    }
+
+    &--grey {
+        background-color: var(--black-10, #F4F6F7);
+        box-shadow: 0px 0px 74px rgba(234, 252, 64, 0.21);
+
+        span {
+            color: var(--black-100, #254558);
+        }
+
+        .icon-enter {
+            fill: var(--black-100, #254558);
+        }
+
+        @include hover-active {
+            background-color: var(--black-100, #254558);
+
+            span {
+                color: var(--white-color, #fff);
+            }
+
+            .icon-enter {
+                fill: var(--white-color, #fff);
+            }
+        }
+    }
+}

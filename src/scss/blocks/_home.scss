@@ -1,0 +1,195 @@
+.home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+
+    &__images-slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    &__images-swiper {
+        &.swiper {
+            position: relative;
+            height: 100%;
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background-image: linear-gradient(to right, rgba($color: #fff, $alpha: 0.8) 0%, rgba($color: #fff, $alpha: 0.8) 100%);
+            content: "";
+        }
+
+        &--no-after {
+            &::after {
+                content: none;
+            }
+        }
+
+        &--blue {
+            .home__swiper-wrapper {
+                background: var(--black-100, #254558);
+            }
+
+            .home__swiper-slide {
+                opacity: 0.2;
+            }
+        }
+    }
+
+    &__swiper-slide {
+        height: 100%;
+
+        img {
+            @include centeredAbsolute();
+            z-index: 10;
+
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__info-slider {
+        position: relative;
+        z-index: 200;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .home__site-container {
+            flex-grow: 1;
+        }
+
+        &--center {
+            .home__site-container {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    &__info-swiper {
+        &.swiper {
+            height: 100%;
+        }
+    }
+
+    &__info-swiper-wrapper {
+        &.swiper-wrapper {
+            align-items: center;
+        }
+    }
+
+    &__swiper-pagination {
+        position: absolute;
+        top: calc(100% - 10rem);
+        left: 50%;
+        bottom: unset;
+        z-index: 1;
+        transform: translateX(-50%);
+        width: 100%;
+
+        @include breakpoint(laptop) {
+            top: calc(100% - 5.2rem);
+        }
+
+        .double-grid__right {
+            position: relative;
+            width: 100%;
+
+            @include breakpoint(laptop) {
+                grid-column: 1;
+            }
+
+            .swiper-pagination {
+                top: 50%;
+                left: 0;
+                bottom: unset;
+                transform: translateY(-50%);
+                text-align: left;
+            }
+        }
+
+        .swiper-pagination {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+
+            .swiper-pagination-bullet {
+                flex: 0 0 7.5rem;
+                display: block;
+                width: unset;
+                height: 1.5px;
+                margin: unset;
+                background: var(--black-40, #A8B5BC);
+                border-radius: 0;
+                opacity: 1;
+
+                @include breakpoint(laptop) {
+                    flex: 1 1 auto;
+                    height: 2px;
+                }
+
+                &.swiper-pagination-bullet-active {
+                    background: var(--black-100, #254558);
+                }
+            }
+        }
+
+        .double-grid {
+            @include breakpoint(laptop) {
+                grid-template-columns: 100%;
+                padding: 0 10rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__swiper-button {
+        &.swiper-button-next,
+        &.swiper-button-prev {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 100%;
+            transform: translateY(-50%);
+            background-color: rgba($color: #254558, $alpha: 0.1);
+
+            @include breakpoint(small-tablet) {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__title {
+        max-width: 100rem;
+    }
+
+    &__button {
+        width: max-content;
+        margin-top: 3rem;
+
+        @include breakpoint(small-mobile) {
+            width: 100%;
+        }
+    }
+}

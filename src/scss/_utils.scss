@@ -1,3 +1,36 @@
+.padding-top-header {
+    padding-top: var(--header-height, 15.2rem);
+}
+
+.padding-top-breadcrumbs {
+    padding-top: calc(var(--header-height, 15.2rem) + var(--breadcrumbs-height, 5.7rem));
+}
+
+.color-white {
+    color: var(--white-color, #fff);
+}
+
+.color-yellow {
+    color: var(--yellow-100, #EAFC40);
+}
+
+.bg-black {
+    background-color: var(--back-color, #182E3B);
+}
+
+.h3 {
+    font: var(--font-h-second-36);
+}
+
+.h2 {
+    font: var(--font-h-second-52);
+}
+
+.h1 {
+    font: var(--font-h-second-72);
+}
+
+
 .visually-hidden {
     @include visuallyHidden();
 }
@@ -16,13 +49,13 @@
 }
 
 .hide-on-mobile {
-    @include breakpoint(mobile) {
+    @include breakpoint(portrait-tablet) {
         display: none !important;
     }
 }
 
 .show-on-mobile {
-    @include breakpointMF(small-tablet) {
+    @include breakpointMF(portrait-tablet) {
         display: none !important;
     }
 }

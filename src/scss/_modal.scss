@@ -1,0 +1,155 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+
+    backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--grey-100, #F4F5F6);
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity;
+
+    @include breakpoint(portrait-tablet) {
+        z-index: 450;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    &:not(.active) {
+        right: calc(-1 * var(--sb-width, 0));
+    }
+
+    @include noScrollbar();
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+    &__close {
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        z-index: 50;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 6.2rem;
+        height: 6.2rem;
+
+        background-color: var(--black-20, #D3DADE);
+
+        @include breakpoint(portrait-tablet) {
+            @include visuallyHidden();
+        }
+
+        .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            fill: var(--black-100, #254558);
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        padding-right: 3rem;
+        overflow: auto;
+
+        @include breakpoint(portrait-tablet) {
+            flex-direction: column;
+            padding-top: var(--header-height, 8rem);
+            padding-right: 0;
+        }
+    }
+
+    &__form-wrapper {
+        flex: 0 0 84.5rem;
+
+        @include breakpoint(desktop) {
+            flex: 0 0 70rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            flex: 0 1 auto;
+        }
+    }
+
+    &__form-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 7.4rem;
+
+        @include breakpoint(desktop) {
+            padding: 5.4rem;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            padding: 2rem 1rem 2rem;
+        }
+
+        .callback__title {
+            padding-top: 1rem;
+            line-height: 1.4;
+
+            @include breakpoint(portrait-tablet) {
+                padding-top: unset;
+                line-height: 1.25;
+            }
+        }
+    }
+
+    &__picture-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        flex: 1 1 50%;
+
+        @include breakpoint(portrait-tablet) {
+            flex: 0 0 auto;
+            height: auto;
+            aspect-ratio: 2.2 / 1;
+        }
+
+        img {
+            @include centeredAbsolute();
+            z-index: 10;
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.modal-open {
+    .page-header__breadcrumbs {
+        display: none;
+    }
+}

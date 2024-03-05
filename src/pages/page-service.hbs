@@ -1,0 +1,419 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="padding-top-breadcrumbs home">
+    <div class="home__images-slider">
+        <div class="home__images-swiper home__images-swiper--blue home__images-swiper--no-after swiper">
+            <ul class="home__swiper-wrapper swiper-wrapper">
+                <li class="home__swiper-slide swiper-slide">
+                    <picture>
+                        <source media="(max-width: 992px)" type="image/webp" srcset="./img/hero/service/picture-mobile.webp" alt="hero image"/>
+                        <source media="(min-width: 992px)" type="image/webp" srcset="./img/hero/service/picture.webp" alt="hero image"/>
+                        <img class="lazy" src="./img/hero/service/picture.jpg"
+                            alt="city image" />
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="home__info-slider home__info-slider--center color-white">
+        <div class="home__site-container">
+            <h2 class="h2 home__title">
+                Длинное название<br> услуги в несколько строк
+            </h2>
+
+            <a href="#callback-modal" class="button button--second home__button js-open-modal">
+                <span>Получить консультацию</span>
+                <svg class="icon icon-enter">
+                    <use xlink:href="#enter"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section simple-section">
+    <div class="simple-section__site-container">
+        <div class="simple-section__article">
+            <article>
+                <h2>Внутренний заголовок страницы H2</h2>
+
+                <p>
+                    Жирмунский, однако, настаивал, что синхрония доступна.
+                    Анжамбеман семантически отражает хорей. Представленный
+                    лексико-семантический анализ является психолингвистическим
+                    в своей основе, но графомания возможна.
+                </p>
+            </article>
+
+            <article>
+                <h3>Большой заголовок H3</h3>
+
+                <div>
+                    <blockquote>
+                        Жирмунский, однако, настаивал, что синхрония доступна.
+                        Анжамбеман семантически отражает хорей. Представленный
+                        <a href="#">лексико-семантический анализ</a> является
+                        психолингвистическим в своей основе, но графомания возможна.
+                    </blockquote>
+
+                    <q>
+                        Алексей Кизляр, руководитель отдела маркетинга
+                    </q>
+
+                    <i>
+                        Подтекст, если уловить хореический ритм или аллитерацию
+                        на "р", иллюстрирует культурный размер. <s>Голос персонажа
+                        интуитивно понятен.</s> Субъективное восприятие вразнобой
+                        нивелирует дольник. Ритмический рисунок, чтобы уловить
+                        хореический ритм или аллитерацию на "л", неумеренно
+                        начинает ритм.
+                    </i>
+                </div>
+
+                <figure>
+                    <div>
+                        <picture>
+                            <source media="(max-width: 768px)" type="image/webp" srcset="./img/article/image-mobile.webp" alt="article image"/>
+                            <source media="(min-width: 768px)" type="image/webp" srcset="./img/article/image.webp" alt="article image"/>
+                            <img class="lazy" src="./img/article/image.jpg"
+                                alt="article image" />
+                        </picture>
+                        <figcaption>article image</figcaption>
+                    </div>
+                </figure>
+
+            </article>
+
+            <article>
+                <h4>Подзаголовок H4</h4>
+
+                <div>
+                    <ul>
+                        <li>
+                            Жирмунский, однако, настаивал, что синхрония доступна.
+                        </li>
+
+                        <li>
+                            Анжамбеман семантически отражает хорей.
+                        </li>
+
+                        <li>
+                            Представленный <a href="#">лексико-семантический анализ</a> является
+                            психолингвистическим в своей основе, но графомания возможна.
+                        </li>
+                    </ul>
+
+                    <ol>
+                        <li>
+                            Жирмунский, однако, настаивал, что синхрония доступна.
+                        </li>
+
+                        <li>
+                            Анжамбеман семантически отражает хорей.
+                        </li>
+
+                        <li>
+                            Представленный <a href="#">лексико-семантический анализ</a> является
+                            психолингвистическим в своей основе, но графомания возможна.
+                        </li>
+                    </ol>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section gallery">
+    <div class="gallery__site-container">
+        <div class="gallery__body">
+            <div class="gallery__slider js-gallery-swiper-wrapper">
+                <div class="gallery__swiper swiper js-gallery-top-swiper">
+                    <ul class="gallery__swiper-wrapper swiper-wrapper">
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="gallery__swiper-slide swiper-slide">
+                            <a
+                                href="./img/gallery/image.png"
+                                class="gallery__image"
+                                data-fancybox
+                            >
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="./img/gallery/image.webp" alt="city image"/>
+                                    <img class="lazy" src="./images/gallery/image.png" alt="city image">
+                                </picture>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="advantages-section section color-white bg-black">
+    <div class="advantages-section__site-container">
+        <h1 class="advantages-section__title h1">
+            <p>
+                <span class="color-yellow">New Technologies&nbsp;</span>
+                <span>выбирают</span>
+            </p>
+            <p>
+                <span>тысячи людей&nbsp;</span>
+                <span class="color-yellow"> по всему миру</span>
+            </p>
+        </h1>
+
+        <ul class="advantages-section__list">
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">01</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/trending-up.png" alt="advantages trending up icon">
+
+                    <p>
+                        Обеспечиваем&nbsp;<span class="color-yellow">высокий<br> уровень</span>&nbsp;автоматизации<br> и диспетчеризации
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">02</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/thumb-up.png" alt="advantages thumb up icon">
+
+                    <p>
+                        <span class="color-yellow">3000 +</span>&nbsp;клиентов<br> доверили свои бизнес&shy;-процеессы
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">03</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/transport.png" alt="advantages transport icon">
+
+                    <p>
+                        <span class="color-yellow">Быстрая доставка</span><br> оборудования&nbsp;с<br> гарантией
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">04</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/support.png" alt="advantages support icon">
+
+                    <p>
+                        Все сделки&nbsp;<span class="color-yellow">проводятся с договорами</span>&nbsp;и гарантией&nbsp;с<br> нашей стороны
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">05</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/trending-up.png" alt="advantages trending up icon">
+
+                    <p>
+                        Обеспечиваем&nbsp;<span class="color-yellow">высокий<br> уровень</span>&nbsp;автоматизации<br> и диспетчеризации
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">06</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/thumb-up.png" alt="advantages thumb up icon">
+
+                    <p>
+                        <span class="color-yellow">3000 +</span>&nbsp;клиентов<br> доверили свои бизнес&shy;-процеессы
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">07</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/transport.png" alt="advantages transport icon">
+
+                    <p>
+                        <span class="color-yellow">Быстрая доставка</span><br> оборудования&nbsp;с<br> гарантией
+                    </p>
+                </div>
+            </li>
+            <li class="advantages-section__item">
+                <span class="advantages-section__count">08</span>
+
+                <div class="advantages-section__info">
+                    <img src="./img/advantages/support.png" alt="advantages support icon">
+
+                    <p>
+                        Все сделки&nbsp;<span class="color-yellow">проводятся с договорами</span>&nbsp;и гарантией&nbsp;с<br> нашей стороны
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="seo-section section">
+    <div class="seo-section__site-container">
+        <div class="double-grid double-grid--wrap">
+            <div class="double-grid__left">
+                <h2 class="h2">
+                    СЕО заголовок<br>
+                    в несколько строк
+                </h2>
+            </div>
+            <div class="double-grid__right seo-section__body seo-section__body--collapsed">
+
+                <div class="seo-section__text">
+                    <p>
+                        Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                        семантически отражает хорей. Представленный лексико-семантический
+                        анализ является психолингвистическим в своей основе, но графомания
+                        возможна.
+                    </p>
+
+                    <p>
+                        Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                        иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                        Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                        рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                        неумеренно начинает ритм.
+                    </p>
+
+                    <p>
+                        Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман
+                        семантически отражает хорей. Представленный лексико-семантический
+                        анализ является психолингвистическим в своей основе, но графомания
+                        возможна.
+                    </p>
+
+                    <p>
+                        Подтекст, если уловить хореический ритм или аллитерацию на "р",
+                        иллюстрирует культурный размер. Голос персонажа интуитивно понятен.
+                        Субъективное восприятие вразнобой нивелирует дольник. Ритмический
+                        рисунок, чтобы уловить хореический ритм или аллитерацию на "л",
+                        неумеренно начинает ритм.
+                    </p>
+                </div>
+
+                <button class="expand js-seo-expand" data-text="Читать полностью"></button>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

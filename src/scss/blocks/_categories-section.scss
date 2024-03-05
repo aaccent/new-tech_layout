@@ -1,0 +1,25 @@
+.categories-section {
+    &__category {
+        margin-bottom: 10rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(tablet) {
+            margin-bottom: 8rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include breakpoint(small-tablet) {
+            margin-bottom: 5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
