@@ -27,9 +27,9 @@ npm run build
 </details>
 
 # Ссылки на верстку:
-## Страница - [Главная]().
-## Страница - [Услуги]().
-## Страница - [Услуга]().
-## Страница - [Вакансии]().
-## Страница - [Контакты]().
-## Страница - [Партнёрам]().
+## Страница - [Главная](https://aaccent.github.io/new-tech_layout/).
+## Страница - [Услуги](https://aaccent.github.io/new-tech_layout/page-services.html).
+## Страница - [Услуга](https://aaccent.github.io/new-tech_layout/page-service.html).
+## Страница - [Вакансии](https://aaccent.github.io/new-tech_layout/page-partners.html).
+## Страница - [Контакты](https://aaccent.github.io/new-tech_layout/page-contacts.html).
+## Страница - [Партнёрам](https://aaccent.github.io/new-tech_layout/page-partners.html).
