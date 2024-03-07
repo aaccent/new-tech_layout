@@ -19,11 +19,11 @@ module.exports = {
       }
     ]
   },
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   optimization: {
     usedExports: true,
   },
-  mode: 'development',
+  mode: 'production',
   externals: {
     jquery: 'jQuery'
   }
