@@ -15,18 +15,32 @@
         @include breakpoint(laptop) {
             font:  600 1.6rem/1.27 var(--second-ff);
         }
+
+        &:not(span) {
+            @include hover-active {
+                color: var(--blue-100, #1ED2F4);
+            }
+        }
     }
 
     &__text {
         font: var(--font-p-main-14);
         opacity: 0.8;
         transition: var(--transition);
+
+        &:not(span) {
+            @include hover-active {
+                color: var(--blue-100, #1ED2F4);
+                opacity: 1;
+            }
+        }
     }
 
-    @include hover-active {
-        .phone__text {
-            color: var(--blue-100, #1ED2F4);
-            opacity: 1;
+    &:is(a) {
+        @include hover-active {
+            .phone__number {
+                color: var(--blue-100, #1ED2F4);
+            }
         }
     }
 }

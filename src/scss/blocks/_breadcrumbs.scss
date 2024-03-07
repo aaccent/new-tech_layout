@@ -45,7 +45,6 @@
         display: block;
         color: inherit;
         font: 300 1.8rem/1.5 var(--second-ff);
-        pointer-events: none;
 
         @include breakpoint(tablet) {
             font: 300 1.6rem/1.5 var(--second-ff);

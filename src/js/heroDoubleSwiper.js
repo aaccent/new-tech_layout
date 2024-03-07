@@ -9,6 +9,7 @@ export default () => {
     const infoSwiper = new Swiper('#home-info-swiper', {
         speed: 1000,
         parallax: true,
+        loop: true,
 
         navigation: {
             nextEl: '.home__swiper-button-next',

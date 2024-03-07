@@ -51,6 +51,13 @@
                 color: var(--black-100, #254558);
             }
 
+            .phone {
+                .phone__number {
+                    @include breakpoint(laptop) {
+                        font: var(--font-h-second-22);
+                    }
+                }
+            }
         }
     }
 
@@ -170,7 +177,7 @@
             }
         }
 
-        > a {
+        > .phone {
             margin-top: 2rem;
         }
 
