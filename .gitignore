@@ -94,3 +94,7 @@ node_modules
 # MacOS Files
 
 .DS_Store
+
+# misc
+.idea
+.vscode
