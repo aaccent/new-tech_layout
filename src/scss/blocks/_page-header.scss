@@ -95,7 +95,7 @@
         flex: 0 0 auto;
         column-gap: 13.3rem;
 
-        @include breakpoint(large-desktop) {
+        @include breakpoint(tablet) {
             column-gap: 6rem;
         }
     }

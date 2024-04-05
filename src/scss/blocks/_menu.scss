@@ -3,7 +3,7 @@
     align-items: center;
     column-gap: 6rem;
 
-    @include breakpoint(large-desktop) {
+    @include breakpoint(tablet) {
         column-gap: 3rem;
     }
 
