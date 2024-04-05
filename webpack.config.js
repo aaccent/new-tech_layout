@@ -19,11 +19,11 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval-source-map',
   optimization: {
     usedExports: true,
   },
-  mode: 'production',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   externals: {
     jquery: 'jQuery'
   }
