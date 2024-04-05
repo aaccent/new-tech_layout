@@ -28,8 +28,7 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-
-        @include breakpointMF(large-desktop) {
+        @include breakpointMF(desktop) {
             grid-template-columns: repeat(4, 1fr);
             grid-auto-rows: minmax(30.2rem, 1fr);
         }
@@ -127,7 +126,7 @@
             &::before {
                 content: none;
 
-                @include breakpointMF(large-desktop) {
+                @include breakpointMF(tablet) {
                     content: "";
                 }
             }
@@ -137,7 +136,7 @@
         &:nth-child(4n+4) {
             &::after,
             &::before {
-                @include breakpointMF(large-desktop) {
+                @include breakpointMF(tablet) {
                     content: none;
                 }
             }
