@@ -165,7 +165,7 @@
             margin-top: 2rem;
             font: 500 2.6rem/1.26 var(--second-ff);
 
-            @include breakpoint(large-desktop) {
+            @include breakpoint(tablet) {
                 font: 500 2rem/1.25 var(--second-ff);
             }
 
